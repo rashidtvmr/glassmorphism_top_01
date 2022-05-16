@@ -4,16 +4,204 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Cool CSS Effect</title>
+    <meta name="title" content="CSS Effects" />
+    <meta
+      name="description"
+      content="Glassmorphis Effect, Transparent Screen"
+    />
+    <meta name="keywords" content="Glassmorphis Effect, Transparent Screen" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+      }
+
+      body {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: rgb(5, 14, 19);
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .btn {
+        position: relative;
+        display: inline-block;
+        border: none;
+        border-radius: 50px;
+        background: none;
+        padding: 25px 75px;
+        margin: 30px;
+      }
+
+      .btn a {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 30px;
+        color: #fff;
+        z-index: 1;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-decoration: none;
+        overflow: hidden;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        backdrop-filter: blur(15px);
+      }
+
+      .btn:hover a {
+        letter-spacing: 3px;
+      }
+
+      .btn a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+          to left,
+          rgba(255, 255, 255, 0.15),
+          transparent
+        );
+        transform: skewX(40deg) translateX(0);
+        transition: all 0.5s ease-out;
+      }
+
+      .btn:hover a::before {
+        transform: skewX(40deg) translateX(200%);
+      }
+
+      .btn::before,
+      .btn::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30px;
+        height: 10px;
+        border-radius: 10px;
+        background: #f00;
+        transition: all 0.4s ease-in-out;
+        transition-delay: 0s;
+      }
+
+      .btn::before {
+        bottom: -5px;
+      }
+
+      .btn::after {
+        top: -5px;
+      }
+
+      .btn:hover::before,
+      .btn:hover::after {
+        height: 50%;
+        width: 80%;
+        border-radius: 30px;
+        transition-delay: 0.3s;
+      }
+
+      .btn:hover::before {
+        bottom: 0;
+      }
+
+      .btn:hover::after {
+        top: 0;
+      }
+
+      .btn:nth-child(1)::before,
+      .btn:nth-child(1)::after {
+        background: #ff7979;
+        box-shadow: 0 0 5px #ff7979, 0 0 15px #ff7979, 0 0 30px #ff7979,
+          0 0 60px #ff7979;
+      }
+
+      .btn:nth-child(2)::before,
+      .btn:nth-child(2)::after {
+        background: #2bd2ff;
+        box-shadow: 0 0 5px #2bd2ff, 0 0 15px #2bd2ff, 0 0 30px #2bd2ff,
+          0 0 60px #2bd2ff;
+      }
+
+      .btn:nth-child(3)::before,
+      .btn:nth-child(3)::after {
+        background: #1eff45;
+        box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45,
+          0 0 60px #1eff45;
+      }
+
+      .btn:nth-child(4)::before,
+      .btn:nth-child(4)::after {
+        background: #fffa65;
+        box-shadow: 0 0 5px #fffa65, 0 0 15px #fffa65, 0 0 30px #fffa65,
+          0 0 60px #fffa65;
+      }
+      .btn:nth-child(5)::before,
+      .btn:nth-child(5)::after {
+        background: #fffa;
+        box-shadow: 0 0 5px #fffa, 0 0 15px #fffa, 0 0 30px #fffa,
+          0 0 60px #fffa;
+      }
+
+      .btn:nth-child(6)::before,
+      .btn:nth-child(6)::after {
+        background: #ff9f4a;
+        box-shadow: 0 0 5px #ff9f4a, 0 0 15px #ff9f4a, 0 0 30px #ff9f4a,
+          0 0 60px #ff9f4a;
+      }
+      .btn:nth-child(7)::before,
+      .btn:nth-child(7)::after {
+        background: #5a20cb;
+        box-shadow: 0 0 5px #5a20cb, 0 0 15px #5a20cb, 0 0 30px #5a20cb,
+          0 0 60px #5a20cb;
+      }
+      .btn:nth-child(8)::before,
+      .btn:nth-child(8)::after {
+        background: #e5d68a;
+        box-shadow: 0 0 5px #e5d68a, 0 0 15px #e5d68a, 0 0 30px #e5d68a,
+          0 0 60px #e5d68a;
+      }
+    </style>
   </head>
   <body>
-    <center>
-      <div>
-        <a href="Two-Step_Authentication-main/">TFA screen</a>
-      </div>
-      <div>
-        <a href="-Sidebar-Menu-Dashboard-master/slider/slider.html#">Sidebar</a>
-      </div>
-    </center>
+    <div class="container">
+      <button class="btn"><a href="/dashboard.html">Dashboard</a></button>
+      <button class="btn"><a href="/dashboard_sb/">Dashboard 2</a></button>
+      <button class="btn"><a href="/calculator.html">Calculator</a></button>
+      <button class="btn">
+        <a href="/gradientcard.html">Card Gradient</a>
+      </button>
+      <button class="btn"><a href="/card.html">Card</a></button>
+      <button class="btn"><a href="/clock.html">Clock</a></button>
+      <button class="btn"><a href="/login.html">Login Screen</a></button>
+      <button class="btn"><a href="/social.html">Social Icon</a></button>
+      <button class="btn"><a href="/social2.html">Social Icon</a></button>
+    </div>
   </body>
 </html>
